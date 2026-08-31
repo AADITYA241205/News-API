@@ -107,13 +107,11 @@
             left: 20%;
 
             width: 80vw;
-            max-width: 900px;
             height: 80vh;
 
             background-color: white;
             border-radius: 15px;
             padding: 30px;
-
 
             overflow-y: auto;
 
@@ -145,6 +143,12 @@
                 `
                 ndiv.style.border = '2px solid black'
                 ndiv.addEventListener("click", () => {
+
+                let oldBox = document.querySelector(".box");
+
+    if (oldBox) {
+        oldBox.remove();
+    }
 
                     let nbox = document.createElement('div')
                     nbox.classList.add('box')
